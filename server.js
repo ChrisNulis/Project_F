@@ -18,7 +18,7 @@ const MONGODB_URI = process.env.MONGODB_URI
 const venuesController = require('./controllers/venues_controller.js')
 app.use(express.static('public'))
 app.use(express.json())
-app.use('/venues', venuesController)
+app.use('/', venuesController)
 app.use(cors())
 // app.get('/', (req, res) =>{
 //    res.send('hello wold')
