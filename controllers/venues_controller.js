@@ -18,8 +18,8 @@ venues.post('/', (req, res) => {
 })
 
 venues.get('/seed', (req, res) => {
-  Venues.insertMany(venueSeed, (err, manyVenues) => {
-    res.redirect('/place')
+  Venues.insertMany(venuesSeed, (err, manyVenues) => {
+    res.redirect('/venues')
   })
 })
 
