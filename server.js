@@ -15,11 +15,12 @@ const MONGODB_URI = process.env.MONGODB_URI
 /*============= MIDDLEWARE ==============*/
 
 //Use this middleware to return JSON data, rather than res.send/urlencoded which returns HTML:
-const venuesController = require('./controllers/venues_controller.js')
+app.use(cors())
 app.use(express.static('public'))
 app.use(express.json())
+const venuesController = require('./controllers/venues_controller.js')
 app.use('/', venuesController)
-app.use(cors())
+
 // app.get('/', (req, res) =>{
 //    res.send('hello wold')
 // })
